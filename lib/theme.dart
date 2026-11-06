@@ -24,7 +24,7 @@ ThemeData buildTheme() {
     surface: Brand.paper,
     brightness: Brightness.light,
   );
-  // Poppins has Latin + Devanagari; symbols like ₂ and → fall back to Roboto
+  // Poppins has Latin + Devanagari; symbols like 2 and → fall back to Roboto
   // (Android's system font).
   final base = ThemeData(useMaterial3: true, colorScheme: scheme, fontFamily: 'Poppins',
       fontFamilyFallback: const ['Roboto', 'sans-serif']);

@@ -1,7 +1,7 @@
 /// Feature 12: interactive animated diagram — Photosynthesis.
 ///
-/// * light-intensity slider → more sunlight rays and more O₂ bubbles per second
-/// * labelled: Sunlight, Leaf (chlorophyll), CO₂, Water, O₂, Glucose
+/// * light-intensity slider → more sunlight rays and more O2 bubbles per second
+/// * labelled: Sunlight, Leaf (chlorophyll), CO2, Water, O2, Glucose
 /// * "Play steps" walks through the process one step at a time (EN/HI captions)
 ///
 /// Built with a CustomPainter + a Ticker driving a tiny particle system.
@@ -25,14 +25,14 @@ class PhotoStep {
 const photoSteps = [
   PhotoStep('sun', 'Sunlight falls on the leaf. Chlorophyll absorbs the light energy.',
       'सूरज की रोशनी पत्ती पर पड़ती है। क्लोरोफ़िल प्रकाश ऊर्जा सोख लेता है।'),
-  PhotoStep('water', 'Water (H₂O) travels up from the roots through the xylem to the leaf.',
-      'पानी (H₂O) जड़ों से ज़ाइलम के रास्ते पत्ती तक पहुँचता है।'),
-  PhotoStep('co2', 'Carbon dioxide (CO₂) from air enters the leaf through tiny pores called stomata.',
-      'हवा की कार्बन डाइऑक्साइड (CO₂) स्टोमेटा नाम के छोटे छिद्रों से पत्ती में जाती है।'),
-  PhotoStep('glucose', 'In the chloroplasts, light energy joins CO₂ and water to make glucose (food).',
-      'क्लोरोप्लास्ट में प्रकाश ऊर्जा से CO₂ और पानी मिलकर ग्लूकोज़ (भोजन) बनाते हैं।'),
-  PhotoStep('o2', 'Oxygen (O₂) is released as bubbles. More light → more bubbles!',
-      'ऑक्सीजन (O₂) बुलबुलों के रूप में निकलती है। ज़्यादा रोशनी → ज़्यादा बुलबुले!'),
+  PhotoStep('water', 'Water (H2O) travels up from the roots through the xylem to the leaf.',
+      'पानी (H2O) जड़ों से ज़ाइलम के रास्ते पत्ती तक पहुँचता है।'),
+  PhotoStep('co2', 'Carbon dioxide (CO2) from air enters the leaf through tiny pores called stomata.',
+      'हवा की कार्बन डाइऑक्साइड (CO2) स्टोमेटा नाम के छोटे छिद्रों से पत्ती में जाती है।'),
+  PhotoStep('glucose', 'In the chloroplasts, light energy joins CO2 and water to make glucose (food).',
+      'क्लोरोप्लास्ट में प्रकाश ऊर्जा से CO2 और पानी मिलकर ग्लूकोज़ (भोजन) बनाते हैं।'),
+  PhotoStep('o2', 'Oxygen (O2) is released as bubbles. More light → more bubbles!',
+      'ऑक्सीजन (O2) बुलबुलों के रूप में निकलती है। ज़्यादा रोशनी → ज़्यादा बुलबुले!'),
 ];
 
 class _Particle {
@@ -79,7 +79,7 @@ class _PhotosynthesisScreenState extends State<PhotosynthesisScreen> with Single
     final dt = ((now - _last).inMicroseconds / 1e6).clamp(0.0, 0.05);
     _last = now;
     _time += dt;
-    // Emission rates: O₂ grows strongly with light (that's the lesson!).
+    // Emission rates: O2 grows strongly with light (that's the lesson!).
     _o2Acc += dt * (0.3 + 7 * _light * _light);
     _co2Acc += dt * (0.6 + 1.6 * _light);
     _waterAcc += dt * (0.6 + 1.4 * _light);
@@ -145,8 +145,8 @@ class _PhotosynthesisScreenState extends State<PhotosynthesisScreen> with Single
             child: Text(
               step == null
                   ? (_hindi
-                      ? 'स्लाइडर से धूप बढ़ाओ और O₂ के बुलबुले गिनो। "स्टेप चलाओ" दबाकर पूरी प्रक्रिया देखो।'
-                      : 'Move the slider to change sunlight and count the O₂ bubbles. Press "Play steps" to see the whole process.')
+                      ? 'स्लाइडर से धूप बढ़ाओ और O2 के बुलबुले गिनो। "स्टेप चलाओ" दबाकर पूरी प्रक्रिया देखो।'
+                      : 'Move the slider to change sunlight and count the O2 bubbles. Press "Play steps" to see the whole process.')
                   : '${context.tr('step')} ${_step! + 1}/${photoSteps.length}: ${_hindi ? step.hi : step.en}',
               style: const TextStyle(fontSize: 15, height: 1.4),
             ),
@@ -163,7 +163,7 @@ class _PhotosynthesisScreenState extends State<PhotosynthesisScreen> with Single
           Text('${(_light * 100).round()}%'),
         ]),
         Text(
-          'O₂: ~${(0.3 + 7 * _light * _light).toStringAsFixed(1)} bubbles/sec',
+          'O2: ~${(0.3 + 7 * _light * _light).toStringAsFixed(1)} bubbles/sec',
           style: TextStyle(color: Brand.ink.withValues(alpha: 0.6)),
         ),
         const SizedBox(height: 12),
@@ -177,7 +177,7 @@ class _PhotosynthesisScreenState extends State<PhotosynthesisScreen> with Single
           label: Text(context.tr('play')),
         ),
         const SizedBox(height: 8),
-        Text('6CO₂ + 6H₂O  —(sunlight, chlorophyll)→  C₆H₁₂O₆ + 6O₂',
+        Text('6CO2 + 6H2O  —(sunlight, chlorophyll)→  C6H12O6 + 6O2',
             textAlign: TextAlign.center, style: TextStyle(fontWeight: FontWeight.w600, color: Brand.ink.withValues(alpha: 0.8))),
       ]),
     );
@@ -290,11 +290,11 @@ class _PhotoPainter extends CustomPainter {
     }
 
     label('Sunlight', at(0.24, 0.2), at(0.36, 0.08), 'sun');
-    label('O₂ (oxygen)', at(0.56, 0.24), at(0.78, 0.14), 'o2');
-    label('CO₂', at(0.86, 0.48), at(0.86, 0.62), 'co2');
+    label('O2 (oxygen)', at(0.56, 0.24), at(0.78, 0.14), 'o2');
+    label('CO2', at(0.86, 0.48), at(0.86, 0.62), 'co2');
     label('Leaf (chlorophyll)', at(0.40, 0.46), at(0.24, 0.66), 'glucose');
     label('Glucose', at(0.60, 0.42), at(0.80, 0.30), 'glucose');
-    label('Water (H₂O)', at(0.5, 0.76), at(0.28, 0.80), 'water');
+    label('Water (H2O)', at(0.5, 0.76), at(0.28, 0.80), 'water');
   }
 
   @override
