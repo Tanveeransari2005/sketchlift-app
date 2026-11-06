@@ -1,0 +1,72 @@
+name: sketchlift
+description: "SketchLift — messy diagram photo → clean, labelled, print-ready diagram for students."
+publish_to: 'none'
+
+# Display name lives in lib/app_config.dart (AppConfig.appName) and the
+# Android label in android/app/src/main/AndroidManifest.xml.
+# Rename everything at once with: dart run tool/rename_app.dart "NewName"
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.6.0                      # Gemini / proxy REST calls
+  flutter_secure_storage: ^11.2.0   # user's own Gemini key (encrypted)
+  shared_preferences: ^2.5.6        # settings + daily counter
+  image_picker: ^1.2.4              # camera / gallery / multi-pick
+  google_mlkit_document_scanner: ^0.7.0  # smart auto-crop scanner
+  image: ^4.12.0                    # pure-Dart image processing
+  sqflite: ^2.4.5                   # local library + teacher history
+  path_provider: ^2.1.6
+  path: ^1.9.1
+  pdf: ^3.13.1                      # A4 PDFs
+  printing: ^5.15.1                 # print dialog
+  share_plus: ^13.3.1               # WhatsApp / share sheet
+  gal: ^2.3.3                       # save PNG to gallery
+  speech_to_text: ^7.5.0            # voice questions
+  flutter_tts: ^4.2.5               # spoken answers (hi-IN / en-IN)
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.8
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/branding/logo.png
+    - assets/branding/mascot.png
+    - assets/branding/logo_wordmark.png
+    - assets/demo/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 700
+
+# App icon (adaptive) — dart run flutter_launcher_icons
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: assets/branding/icon_legacy.png
+  adaptive_icon_background: "#FFF8EC"
+  adaptive_icon_foreground: assets/branding/icon_foreground.png
+  min_sdk_android: 24
+
+# Splash screen — dart run flutter_native_splash:create
+flutter_native_splash:
+  color: "#FFF8EC"
+  image: assets/branding/logo.png
+  android_12:
+    color: "#FFF8EC"
+    image: assets/branding/icon_foreground.png

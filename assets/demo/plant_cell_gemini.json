@@ -1,0 +1,128 @@
+{
+ "is_diagram": true,
+ "reason": "It is a hand-drawn educational diagram of a plant cell with labelled organelles.",
+ "subject": "Biology",
+ "title": "Plant Cell",
+ "title_hi": "पादप कोशिका",
+ "parts": [
+  {
+   "name": "Nucleus",
+   "label_text": "nuclues",
+   "point": {
+    "x": 0.4,
+    "y": 0.48
+   },
+   "explain_en": "Controls all activities of the cell and contains genetic material.",
+   "explain_hi": "कोशिका की सभी गतिविधियों को नियंत्रित करता है और इसमें आनुवंशिक पदार्थ होता है।",
+   "label_bbox": {
+    "x": 0.19,
+    "y": 0.55,
+    "w": 0.11,
+    "h": 0.08
+   }
+  },
+  {
+   "name": "Vacuole",
+   "label_text": "vacoule",
+   "point": {
+    "x": 0.52,
+    "y": 0.51
+   },
+   "explain_en": "Stores water, nutrients, and waste materials, maintaining cell turgidity.",
+   "explain_hi": "जल, पोषक तत्व और अपशिष्ट पदार्थों का भण्डारण करता है।",
+   "label_bbox": {
+    "x": 0.46,
+    "y": 0.47,
+    "w": 0.1,
+    "h": 0.08
+   }
+  },
+  {
+   "name": "Cytoplasm",
+   "label_text": "cytoplasm",
+   "point": {
+    "x": 0.38,
+    "y": 0.63
+   },
+   "explain_en": "Jelly-like fluid inside the cell where cellular organelles are suspended.",
+   "explain_hi": "कोशिका के अंदर जेली जैसा द्रव जिसमें कोशिकांग तैरते हैं।",
+   "label_bbox": {
+    "x": 0.19,
+    "y": 0.7,
+    "w": 0.13,
+    "h": 0.08
+   }
+  },
+  {
+   "name": "Mitochondria",
+   "label_text": "mitocondria",
+   "point": {
+    "x": 0.52,
+    "y": 0.7
+   },
+   "explain_en": "Powerhouse of the cell, producing energy in the form of ATP.",
+   "explain_hi": "कोशिका का पावरहाउस, जो ATP के रूप में ऊर्जा उत्पन्न करता है।",
+   "label_bbox": {
+    "x": 0.55,
+    "y": 0.73,
+    "w": 0.16,
+    "h": 0.08
+   }
+  },
+  {
+   "name": "Cell Wall",
+   "label_text": "cell wal",
+   "point": {
+    "x": 0.61,
+    "y": 0.28
+   },
+   "explain_en": "Rigid outer layer providing structural support and protection to plant cells.",
+   "explain_hi": "पादप कोशिकाओं को संरचनात्मक सहायता और सुरक्षा प्रदान करने वाली बाहरी परत।",
+   "label_bbox": {
+    "x": 0.69,
+    "y": 0.27,
+    "w": 0.1,
+    "h": 0.05
+   }
+  },
+  {
+   "name": "Chloroplast",
+   "label_text": "chloroplast",
+   "point": {
+    "x": 0.63,
+    "y": 0.48
+   },
+   "explain_en": "Site of photosynthesis, containing chlorophyll that absorbs sunlight to make food.",
+   "explain_hi": "प्रकाश संश्लेषण का स्थल, जिसमें क्लोरोफिल होता है जो भोजन बनाने में मदद करता है।",
+   "label_bbox": {
+    "x": 0.69,
+    "y": 0.34,
+    "w": 0.13,
+    "h": 0.06
+   }
+  },
+  {
+   "name": "Cell Membrane",
+   "label_text": "cell wal",
+   "point": {
+    "x": 0.67,
+    "y": 0.62
+   },
+   "explain_en": "Semi-permeable layer regulating the movement of substances into and out of the cell.",
+   "explain_hi": "अर्ध-पारगम्य झिल्ली जो पदार्थों के आवागमन को नियंत्रित करती है।",
+   "label_bbox": {
+    "x": 0.73,
+    "y": 0.51,
+    "w": 0.11,
+    "h": 0.07
+   }
+  }
+ ],
+ "arrows": [],
+ "body_bbox": {
+  "x": 0.28,
+  "y": 0.23,
+  "w": 0.44,
+  "h": 0.63
+ }
+}
